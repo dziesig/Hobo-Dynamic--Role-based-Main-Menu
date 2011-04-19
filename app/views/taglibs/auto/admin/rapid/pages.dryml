@@ -1,0 +1,459 @@
+<!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
+
+<!-- ====== Main Navigation ====== -->
+
+<def tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+    <nav-item href="#{base_url}/">Home</nav-item>
+    <nav-item with="&Permission"><ht key="permission.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Role"><ht key="role.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&User"><ht key="user.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+  </navigation>
+</def>
+
+
+
+
+<!-- ====== Permission Pages ====== -->
+
+<def tag="index-page" for="Permission">
+  <page merge title="#{ht 'permission.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page permission" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="permission.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="permission.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="permission.actions.new">New Permission</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Permission">
+  <page merge title="#{ht 'permission.new.title', :default=>[' New Permission'] }">
+    <body: class="new-page permission" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="permission.new.heading">
+            New Permission
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'permission.actions.create', :default=>['Create Permission']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Permission">
+  <page merge title="#{ht 'permission.show.title', :default=>['Permission'] }">
+
+    <body: class="show-page permission" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="permission.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="permission.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Permission
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+            <view:description param="description"/>
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Permission">
+  <page merge title="#{ht 'permission.edit.title', :default=>['Edit Permission'] }">
+
+    <body: class="edit-page permission" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="permission.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Permission
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'permission.actions.delete', :default=>['Remove This Permission']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Role Pages ====== -->
+
+<def tag="index-page" for="Role">
+  <page merge title="#{ht 'role.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page role" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="role.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="role.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="role.actions.new">New Role</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Role">
+  <page merge title="#{ht 'role.new.title', :default=>[' New Role'] }">
+    <body: class="new-page role" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="role.new.heading">
+            New Role
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'role.actions.create', :default=>['Create Role']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Role">
+  <page merge title="#{ht 'role.show.title', :default=>['Role'] }">
+
+    <body: class="show-page role" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="role.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="role.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Role
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+            <view:description param="description"/>
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Role">
+  <page merge title="#{ht 'role.edit.title', :default=>['Edit Role'] }">
+
+    <body: class="edit-page role" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="role.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Role
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'role.actions.delete', :default=>['Remove This Role']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== User Pages ====== -->
+
+<def tag="index-page" for="User">
+  <page merge title="#{ht 'user.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page user" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="user.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="user.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="user.actions.new">New User</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="User">
+  <page merge title="#{ht 'user.new.title', :default=>[' New User'] }">
+    <body: class="new-page user" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="user.new.heading">
+            New User
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'user.actions.create', :default=>['Create User']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="User">
+  <page merge title="#{ht 'user.show.title', :default=>['User'] }">
+
+    <body: class="show-page user" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="user.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="administrator, use_secondary_role" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="user.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit User
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+            <field-list fields="email_address, state, primary_role, secondary_role" param/>
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="User">
+  <page merge title="#{ht 'user.edit.title', :default=>['Edit User'] }">
+
+    <body: class="edit-page user" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="user.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit User
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'user.actions.delete', :default=>['Remove This User']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="invite-page" polymorphic/>
+<def tag="invite-page" for="User">
+
+  <page title="#{ht 'user.invite.title', :default=>['Invite']}" merge>
+
+    <body: class="lifecycle-start-page invite-page" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="user.invite.heading">
+            Invite
+          </ht>
+        </h2>
+      </header>
+
+      <section param="content-body">
+        <invite-form param="form"/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+<def tag="accept-invitation-page" polymorphic/>
+<def tag="accept-invitation-page" for="User">
+  <page title="#{ht 'user.accept_invitation.title', :default=>['Accept Invitation']}" merge>
+
+    <body: class="lifecycle-transition-page accept-invitation-page" param/>
+
+    <content:>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="user.accept_invitation.heading">
+            Accept Invitation
+          </ht>
+        </h2>
+      </header>
+
+      <section param="content-body">
+        <accept-invitation-form param="form"/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+<def tag="reset-password-page" polymorphic/>
+<def tag="reset-password-page" for="User">
+  <page title="#{ht 'user.reset_password.title', :default=>['Reset Password']}" merge>
+
+    <body: class="lifecycle-transition-page reset-password-page" param/>
+
+    <content:>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="user.reset_password.heading">
+            Reset Password
+          </ht>
+        </h2>
+      </header>
+
+      <section param="content-body">
+        <reset-password-form param="form"/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+

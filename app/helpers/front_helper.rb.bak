@@ -1,0 +1,26 @@
+module FrontHelper
+  def permission_to_access( item, user )
+    if user.inspect == 'guest'
+      return false
+    else
+      name = item.to_s;
+      # The following if item.... is a hack primarily because
+      # the context of a <nav-item> that does not include a with=
+      # parameter is rather indeterminate.  Also, we need to allow
+      # the administrators to access Permissions Roles and Users
+      if item.class.name == 'WillPaginate::Collection' || 
+         item.kind_of?(Array) ||
+         name.to_s.blank? || 
+         name == '[]' ||
+         name.include?('.') ||
+         name == 'Permission' ||
+         name == 'Role' ||
+         name == 'User'
+        return true
+      end
+      access = 'user.canAccess' + name.to_s + '?'
+      result = !(eval access).nil?
+      result
+    end
+  end
+end

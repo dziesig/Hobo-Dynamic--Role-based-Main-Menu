@@ -1,0 +1,2816 @@
+<!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
+
+<!-- ====== Main Navigation ====== -->
+
+<def tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+    <nav-item href="#{base_url}/">Home</nav-item>
+    <nav-item with="&TestWithSpace"><ht key="test_with_space.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada1"><ht key="yada1.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada10"><ht key="yada10.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada11"><ht key="yada11.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada12"><ht key="yada12.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada13"><ht key="yada13.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada14"><ht key="yada14.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada15"><ht key="yada15.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada16"><ht key="yada16.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada17"><ht key="yada17.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada18"><ht key="yada18.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada19"><ht key="yada19.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada2"><ht key="yada2.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada20"><ht key="yada20.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada3"><ht key="yada3.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada4"><ht key="yada4.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada5"><ht key="yada5.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada6"><ht key="yada6.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada7"><ht key="yada7.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada8"><ht key="yada8.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada9"><ht key="yada9.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+  </navigation>
+</def>
+
+
+
+
+<!-- ====== TestWithSpace Pages ====== -->
+
+<def tag="index-page" for="TestWithSpace">
+  <page merge title="#{ht 'test_with_space.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page test-with-space" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="test_with_space.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="test_with_space.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="test_with_space.actions.new">New Test with space</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="TestWithSpace">
+  <page merge title="#{ht 'test_with_space.new.title', :default=>[' New Test with space'] }">
+    <body: class="new-page test-with-space" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="test_with_space.new.heading">
+            New Test with space
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'test_with_space.actions.create', :default=>['Create Test with space']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="TestWithSpace">
+  <page merge title="#{ht 'test_with_space.show.title', :default=>['Test with space'] }">
+
+    <body: class="show-page test-with-space" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="test_with_space.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="test_with_space.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Test with space
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="TestWithSpace">
+  <page merge title="#{ht 'test_with_space.edit.title', :default=>['Edit Test with space'] }">
+
+    <body: class="edit-page test-with-space" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="test_with_space.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Test with space
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'test_with_space.actions.delete', :default=>['Remove This Test with space']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== User Pages ====== -->
+
+<def tag="index-page" for="User">
+  <page merge title="#{ht 'user.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page user" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="user.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="user.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+        <div param="new-form">
+          <h3 param="new-form-heading">
+            <ht key="user.form.new.heading">New User</ht>
+          </h3>
+          <form with="&@invalid_record || new_for_current_user(User)" param/>
+        </div>
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="User">
+  <page merge title="#{ht 'user.new.title', :default=>[' New User'] }">
+    <body: class="new-page user" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="user.new.heading">
+            New User
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'user.actions.create', :default=>['Create User']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="User">
+  <page merge title="#{ht 'user.show.title', :default=>['User'] }">
+
+    <body: class="show-page user" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="user.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="administrator, use_secondary_role" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="user.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit User
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+            <field-list fields="email_address, state, primary_role, secondary_role" param/>
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="User">
+  <page merge title="#{ht 'user.edit.title', :default=>['Edit User'] }">
+
+    <body: class="edit-page user" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="user.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit User
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'user.actions.delete', :default=>['Remove This User']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="invite-page" polymorphic/>
+<def tag="invite-page" for="User">
+
+  <page title="#{ht 'user.invite.title', :default=>['Invite']}" merge>
+
+    <body: class="lifecycle-start-page invite-page" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="user.invite.heading">
+            Invite
+          </ht>
+        </h2>
+      </header>
+
+      <section param="content-body">
+        <invite-form param="form"/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+<def tag="accept-invitation-page" polymorphic/>
+<def tag="accept-invitation-page" for="User">
+  <page title="#{ht 'user.accept_invitation.title', :default=>['Accept Invitation']}" merge>
+
+    <body: class="lifecycle-transition-page accept-invitation-page" param/>
+
+    <content:>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="user.accept_invitation.heading">
+            Accept Invitation
+          </ht>
+        </h2>
+      </header>
+
+      <section param="content-body">
+        <accept-invitation-form param="form"/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+<def tag="reset-password-page" polymorphic/>
+<def tag="reset-password-page" for="User">
+  <page title="#{ht 'user.reset_password.title', :default=>['Reset Password']}" merge>
+
+    <body: class="lifecycle-transition-page reset-password-page" param/>
+
+    <content:>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="user.reset_password.heading">
+            Reset Password
+          </ht>
+        </h2>
+      </header>
+
+      <section param="content-body">
+        <reset-password-form param="form"/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+<!-- ====== Yada10 Pages ====== -->
+
+<def tag="index-page" for="Yada10">
+  <page merge title="#{ht 'yada10.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada10" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada10.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada10.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada10.actions.new">New Yada10</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada10">
+  <page merge title="#{ht 'yada10.new.title', :default=>[' New Yada10'] }">
+    <body: class="new-page yada10" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada10.new.heading">
+            New Yada10
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada10.actions.create', :default=>['Create Yada10']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada10">
+  <page merge title="#{ht 'yada10.show.title', :default=>['Yada10'] }">
+
+    <body: class="show-page yada10" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada10.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada10.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada10
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada10">
+  <page merge title="#{ht 'yada10.edit.title', :default=>['Edit Yada10'] }">
+
+    <body: class="edit-page yada10" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada10.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada10
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada10.actions.delete', :default=>['Remove This Yada10']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada11 Pages ====== -->
+
+<def tag="index-page" for="Yada11">
+  <page merge title="#{ht 'yada11.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada11" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada11.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada11.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada11.actions.new">New Yada11</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada11">
+  <page merge title="#{ht 'yada11.new.title', :default=>[' New Yada11'] }">
+    <body: class="new-page yada11" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada11.new.heading">
+            New Yada11
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada11.actions.create', :default=>['Create Yada11']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada11">
+  <page merge title="#{ht 'yada11.show.title', :default=>['Yada11'] }">
+
+    <body: class="show-page yada11" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada11.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada11.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada11
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada11">
+  <page merge title="#{ht 'yada11.edit.title', :default=>['Edit Yada11'] }">
+
+    <body: class="edit-page yada11" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada11.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada11
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada11.actions.delete', :default=>['Remove This Yada11']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada12 Pages ====== -->
+
+<def tag="index-page" for="Yada12">
+  <page merge title="#{ht 'yada12.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada12" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada12.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada12.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada12.actions.new">New Yada12</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada12">
+  <page merge title="#{ht 'yada12.new.title', :default=>[' New Yada12'] }">
+    <body: class="new-page yada12" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada12.new.heading">
+            New Yada12
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada12.actions.create', :default=>['Create Yada12']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada12">
+  <page merge title="#{ht 'yada12.show.title', :default=>['Yada12'] }">
+
+    <body: class="show-page yada12" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada12.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada12.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada12
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada12">
+  <page merge title="#{ht 'yada12.edit.title', :default=>['Edit Yada12'] }">
+
+    <body: class="edit-page yada12" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada12.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada12
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada12.actions.delete', :default=>['Remove This Yada12']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada13 Pages ====== -->
+
+<def tag="index-page" for="Yada13">
+  <page merge title="#{ht 'yada13.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada13" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada13.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada13.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada13.actions.new">New Yada13</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada13">
+  <page merge title="#{ht 'yada13.new.title', :default=>[' New Yada13'] }">
+    <body: class="new-page yada13" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada13.new.heading">
+            New Yada13
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada13.actions.create', :default=>['Create Yada13']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada13">
+  <page merge title="#{ht 'yada13.show.title', :default=>['Yada13'] }">
+
+    <body: class="show-page yada13" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada13.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada13.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada13
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada13">
+  <page merge title="#{ht 'yada13.edit.title', :default=>['Edit Yada13'] }">
+
+    <body: class="edit-page yada13" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada13.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada13
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada13.actions.delete', :default=>['Remove This Yada13']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada14 Pages ====== -->
+
+<def tag="index-page" for="Yada14">
+  <page merge title="#{ht 'yada14.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada14" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada14.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada14.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada14.actions.new">New Yada14</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada14">
+  <page merge title="#{ht 'yada14.new.title', :default=>[' New Yada14'] }">
+    <body: class="new-page yada14" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada14.new.heading">
+            New Yada14
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada14.actions.create', :default=>['Create Yada14']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada14">
+  <page merge title="#{ht 'yada14.show.title', :default=>['Yada14'] }">
+
+    <body: class="show-page yada14" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada14.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada14.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada14
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada14">
+  <page merge title="#{ht 'yada14.edit.title', :default=>['Edit Yada14'] }">
+
+    <body: class="edit-page yada14" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada14.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada14
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada14.actions.delete', :default=>['Remove This Yada14']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada15 Pages ====== -->
+
+<def tag="index-page" for="Yada15">
+  <page merge title="#{ht 'yada15.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada15" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada15.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada15.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada15.actions.new">New Yada15</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada15">
+  <page merge title="#{ht 'yada15.new.title', :default=>[' New Yada15'] }">
+    <body: class="new-page yada15" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada15.new.heading">
+            New Yada15
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada15.actions.create', :default=>['Create Yada15']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada15">
+  <page merge title="#{ht 'yada15.show.title', :default=>['Yada15'] }">
+
+    <body: class="show-page yada15" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada15.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada15.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada15
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada15">
+  <page merge title="#{ht 'yada15.edit.title', :default=>['Edit Yada15'] }">
+
+    <body: class="edit-page yada15" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada15.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada15
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada15.actions.delete', :default=>['Remove This Yada15']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada16 Pages ====== -->
+
+<def tag="index-page" for="Yada16">
+  <page merge title="#{ht 'yada16.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada16" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada16.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada16.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada16.actions.new">New Yada16</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada16">
+  <page merge title="#{ht 'yada16.new.title', :default=>[' New Yada16'] }">
+    <body: class="new-page yada16" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada16.new.heading">
+            New Yada16
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada16.actions.create', :default=>['Create Yada16']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada16">
+  <page merge title="#{ht 'yada16.show.title', :default=>['Yada16'] }">
+
+    <body: class="show-page yada16" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada16.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada16.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada16
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada16">
+  <page merge title="#{ht 'yada16.edit.title', :default=>['Edit Yada16'] }">
+
+    <body: class="edit-page yada16" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada16.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada16
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada16.actions.delete', :default=>['Remove This Yada16']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada17 Pages ====== -->
+
+<def tag="index-page" for="Yada17">
+  <page merge title="#{ht 'yada17.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada17" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada17.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada17.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada17.actions.new">New Yada17</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada17">
+  <page merge title="#{ht 'yada17.new.title', :default=>[' New Yada17'] }">
+    <body: class="new-page yada17" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada17.new.heading">
+            New Yada17
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada17.actions.create', :default=>['Create Yada17']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada17">
+  <page merge title="#{ht 'yada17.show.title', :default=>['Yada17'] }">
+
+    <body: class="show-page yada17" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada17.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada17.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada17
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada17">
+  <page merge title="#{ht 'yada17.edit.title', :default=>['Edit Yada17'] }">
+
+    <body: class="edit-page yada17" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada17.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada17
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada17.actions.delete', :default=>['Remove This Yada17']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada18 Pages ====== -->
+
+<def tag="index-page" for="Yada18">
+  <page merge title="#{ht 'yada18.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada18" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada18.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada18.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada18.actions.new">New Yada18</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada18">
+  <page merge title="#{ht 'yada18.new.title', :default=>[' New Yada18'] }">
+    <body: class="new-page yada18" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada18.new.heading">
+            New Yada18
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada18.actions.create', :default=>['Create Yada18']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada18">
+  <page merge title="#{ht 'yada18.show.title', :default=>['Yada18'] }">
+
+    <body: class="show-page yada18" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada18.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada18.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada18
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada18">
+  <page merge title="#{ht 'yada18.edit.title', :default=>['Edit Yada18'] }">
+
+    <body: class="edit-page yada18" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada18.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada18
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada18.actions.delete', :default=>['Remove This Yada18']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada19 Pages ====== -->
+
+<def tag="index-page" for="Yada19">
+  <page merge title="#{ht 'yada19.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada19" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada19.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada19.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada19.actions.new">New Yada19</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada19">
+  <page merge title="#{ht 'yada19.new.title', :default=>[' New Yada19'] }">
+    <body: class="new-page yada19" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada19.new.heading">
+            New Yada19
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada19.actions.create', :default=>['Create Yada19']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada19">
+  <page merge title="#{ht 'yada19.show.title', :default=>['Yada19'] }">
+
+    <body: class="show-page yada19" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada19.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada19.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada19
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada19">
+  <page merge title="#{ht 'yada19.edit.title', :default=>['Edit Yada19'] }">
+
+    <body: class="edit-page yada19" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada19.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada19
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada19.actions.delete', :default=>['Remove This Yada19']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada1 Pages ====== -->
+
+<def tag="index-page" for="Yada1">
+  <page merge title="#{ht 'yada1.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada1" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada1.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada1.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada1.actions.new">New Yada1</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada1">
+  <page merge title="#{ht 'yada1.new.title', :default=>[' New Yada1'] }">
+    <body: class="new-page yada1" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada1.new.heading">
+            New Yada1
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada1.actions.create', :default=>['Create Yada1']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada1">
+  <page merge title="#{ht 'yada1.show.title', :default=>['Yada1'] }">
+
+    <body: class="show-page yada1" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada1.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada1.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada1
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada1">
+  <page merge title="#{ht 'yada1.edit.title', :default=>['Edit Yada1'] }">
+
+    <body: class="edit-page yada1" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada1.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada1
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada1.actions.delete', :default=>['Remove This Yada1']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada20 Pages ====== -->
+
+<def tag="index-page" for="Yada20">
+  <page merge title="#{ht 'yada20.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada20" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada20.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada20.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada20.actions.new">New Yada20</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada20">
+  <page merge title="#{ht 'yada20.new.title', :default=>[' New Yada20'] }">
+    <body: class="new-page yada20" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada20.new.heading">
+            New Yada20
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada20.actions.create', :default=>['Create Yada20']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada20">
+  <page merge title="#{ht 'yada20.show.title', :default=>['Yada20'] }">
+
+    <body: class="show-page yada20" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada20.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada20.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada20
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada20">
+  <page merge title="#{ht 'yada20.edit.title', :default=>['Edit Yada20'] }">
+
+    <body: class="edit-page yada20" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada20.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada20
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada20.actions.delete', :default=>['Remove This Yada20']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada2 Pages ====== -->
+
+<def tag="index-page" for="Yada2">
+  <page merge title="#{ht 'yada2.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada2" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada2.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada2.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada2.actions.new">New Yada2</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada2">
+  <page merge title="#{ht 'yada2.new.title', :default=>[' New Yada2'] }">
+    <body: class="new-page yada2" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada2.new.heading">
+            New Yada2
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada2.actions.create', :default=>['Create Yada2']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada2">
+  <page merge title="#{ht 'yada2.show.title', :default=>['Yada2'] }">
+
+    <body: class="show-page yada2" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada2.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada2.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada2
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada2">
+  <page merge title="#{ht 'yada2.edit.title', :default=>['Edit Yada2'] }">
+
+    <body: class="edit-page yada2" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada2.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada2
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada2.actions.delete', :default=>['Remove This Yada2']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada3 Pages ====== -->
+
+<def tag="index-page" for="Yada3">
+  <page merge title="#{ht 'yada3.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada3" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada3.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada3.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada3.actions.new">New Yada3</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada3">
+  <page merge title="#{ht 'yada3.new.title', :default=>[' New Yada3'] }">
+    <body: class="new-page yada3" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada3.new.heading">
+            New Yada3
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada3.actions.create', :default=>['Create Yada3']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada3">
+  <page merge title="#{ht 'yada3.show.title', :default=>['Yada3'] }">
+
+    <body: class="show-page yada3" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada3.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada3.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada3
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada3">
+  <page merge title="#{ht 'yada3.edit.title', :default=>['Edit Yada3'] }">
+
+    <body: class="edit-page yada3" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada3.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada3
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada3.actions.delete', :default=>['Remove This Yada3']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada4 Pages ====== -->
+
+<def tag="index-page" for="Yada4">
+  <page merge title="#{ht 'yada4.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada4" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada4.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada4.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada4.actions.new">New Yada4</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada4">
+  <page merge title="#{ht 'yada4.new.title', :default=>[' New Yada4'] }">
+    <body: class="new-page yada4" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada4.new.heading">
+            New Yada4
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada4.actions.create', :default=>['Create Yada4']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada4">
+  <page merge title="#{ht 'yada4.show.title', :default=>['Yada4'] }">
+
+    <body: class="show-page yada4" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada4.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada4.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada4
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada4">
+  <page merge title="#{ht 'yada4.edit.title', :default=>['Edit Yada4'] }">
+
+    <body: class="edit-page yada4" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada4.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada4
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada4.actions.delete', :default=>['Remove This Yada4']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada5 Pages ====== -->
+
+<def tag="index-page" for="Yada5">
+  <page merge title="#{ht 'yada5.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada5" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada5.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada5.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada5.actions.new">New Yada5</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada5">
+  <page merge title="#{ht 'yada5.new.title', :default=>[' New Yada5'] }">
+    <body: class="new-page yada5" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada5.new.heading">
+            New Yada5
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada5.actions.create', :default=>['Create Yada5']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada5">
+  <page merge title="#{ht 'yada5.show.title', :default=>['Yada5'] }">
+
+    <body: class="show-page yada5" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada5.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada5.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada5
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada5">
+  <page merge title="#{ht 'yada5.edit.title', :default=>['Edit Yada5'] }">
+
+    <body: class="edit-page yada5" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada5.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada5
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada5.actions.delete', :default=>['Remove This Yada5']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada6 Pages ====== -->
+
+<def tag="index-page" for="Yada6">
+  <page merge title="#{ht 'yada6.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada6" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada6.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada6.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada6.actions.new">New Yada6</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada6">
+  <page merge title="#{ht 'yada6.new.title', :default=>[' New Yada6'] }">
+    <body: class="new-page yada6" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada6.new.heading">
+            New Yada6
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada6.actions.create', :default=>['Create Yada6']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada6">
+  <page merge title="#{ht 'yada6.show.title', :default=>['Yada6'] }">
+
+    <body: class="show-page yada6" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada6.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada6.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada6
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada6">
+  <page merge title="#{ht 'yada6.edit.title', :default=>['Edit Yada6'] }">
+
+    <body: class="edit-page yada6" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada6.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada6
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada6.actions.delete', :default=>['Remove This Yada6']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada7 Pages ====== -->
+
+<def tag="index-page" for="Yada7">
+  <page merge title="#{ht 'yada7.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada7" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada7.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada7.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada7.actions.new">New Yada7</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada7">
+  <page merge title="#{ht 'yada7.new.title', :default=>[' New Yada7'] }">
+    <body: class="new-page yada7" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada7.new.heading">
+            New Yada7
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada7.actions.create', :default=>['Create Yada7']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada7">
+  <page merge title="#{ht 'yada7.show.title', :default=>['Yada7'] }">
+
+    <body: class="show-page yada7" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada7.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada7.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada7
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada7">
+  <page merge title="#{ht 'yada7.edit.title', :default=>['Edit Yada7'] }">
+
+    <body: class="edit-page yada7" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada7.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada7
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada7.actions.delete', :default=>['Remove This Yada7']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada8 Pages ====== -->
+
+<def tag="index-page" for="Yada8">
+  <page merge title="#{ht 'yada8.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada8" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada8.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada8.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada8.actions.new">New Yada8</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada8">
+  <page merge title="#{ht 'yada8.new.title', :default=>[' New Yada8'] }">
+    <body: class="new-page yada8" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada8.new.heading">
+            New Yada8
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada8.actions.create', :default=>['Create Yada8']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada8">
+  <page merge title="#{ht 'yada8.show.title', :default=>['Yada8'] }">
+
+    <body: class="show-page yada8" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada8.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada8.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada8
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada8">
+  <page merge title="#{ht 'yada8.edit.title', :default=>['Edit Yada8'] }">
+
+    <body: class="edit-page yada8" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada8.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada8
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada8.actions.delete', :default=>['Remove This Yada8']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Yada9 Pages ====== -->
+
+<def tag="index-page" for="Yada9">
+  <page merge title="#{ht 'yada9.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page yada9" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="yada9.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="yada9.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="yada9.actions.new">New Yada9</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Yada9">
+  <page merge title="#{ht 'yada9.new.title', :default=>[' New Yada9'] }">
+    <body: class="new-page yada9" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada9.new.heading">
+            New Yada9
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'yada9.actions.create', :default=>['Create Yada9']}"/>
+        </form>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Yada9">
+  <page merge title="#{ht 'yada9.show.title', :default=>['Yada9'] }">
+
+    <body: class="show-page yada9" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="yada9.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="yada9.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Yada9
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+          </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Yada9">
+  <page merge title="#{ht 'yada9.edit.title', :default=>['Edit Yada9'] }">
+
+    <body: class="edit-page yada9" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="yada9.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Yada9
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'yada9.actions.delete', :default=>['Remove This Yada9']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+ <p class="dryml_file">"#{__FILE__}, #{__LINE__}"</p> 
+    </content:>
+
+  </page>
+</def>
+
+
+
+

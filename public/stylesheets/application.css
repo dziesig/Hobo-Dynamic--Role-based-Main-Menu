@@ -1,0 +1,14 @@
+/* Fixes the over-sized current tab */
+
+.page-header .navigation.main-nav li.current a {
+  color: #222;
+  background: url(../images/30-DBE1E5-FCFEF5.png) repeat-x #FCFEF5;
+  border:0;
+}
+
+/* reduces size of the development-mode dryml file names */
+.dryml_file
+{
+  font-size: 9px;
+}
+

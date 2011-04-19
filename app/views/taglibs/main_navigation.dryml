@@ -1,0 +1,31 @@
+<!-- ====== Main Navigation ====== -->
+
+<def tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+    <nav-item href="#{base_url}/">Home</nav-item>
+    <mode-nav-item/> <!-- ADD THIS IF YOU WANT TO HAVE MULTI-ROLE USERS -->
+    <nav-item with="&TestWithSpace"><ht key="test_with_space.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada1"><ht key="yada1.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada2"><ht key="yada2.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada3"><ht key="yada3.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada4"><ht key="yada4.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada5"><ht key="yada5.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada6"><ht key="yada6.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada7"><ht key="yada7.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada8"><ht key="yada8.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada9"><ht key="yada9.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada10"><ht key="yada10.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada11"><ht key="yada11.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada12"><ht key="yada12.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada13"><ht key="yada13.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada14"><ht key="yada14.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada15"><ht key="yada15.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada16"><ht key="yada16.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada17"><ht key="yada17.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada18"><ht key="yada18.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada19"><ht key="yada19.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Yada20"><ht key="yada20.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+  </navigation>
+</def>
+
+
