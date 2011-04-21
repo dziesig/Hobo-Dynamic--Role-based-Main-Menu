@@ -1,0 +1,15 @@
+<include src="rapid" plugin="hobo"/>
+
+<include src="taglibs/auto/rapid/cards"/>
+<include src="taglibs/auto/rapid/pages"/>
+<include src="taglibs/auto/rapid/forms"/>
+
+<set-theme name="clean"/>
+
+<extend tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+  <mode-nav-item/>
+  <old-main-nav merge-attrs/>
+  </navigation>
+</extend>
+
